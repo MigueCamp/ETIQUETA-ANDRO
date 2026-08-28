@@ -1,0 +1,249 @@
+:root {
+  color-scheme: light;
+  --border: #d0d5dd;
+  --text: #1a1d23;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --bg-soft: #f7f8fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  background: #fff;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app__header h1 {
+  margin: 0 0 4px;
+  font-size: 22px;
+}
+
+.app__header p {
+  margin: 0 0 20px;
+  color: var(--muted);
+}
+
+.app__toolbar {
+  margin-bottom: 12px;
+}
+
+.app__po-input {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--muted);
+  max-width: 320px;
+}
+
+.app__po-input input {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.upload-zone {
+  border: 2px dashed var(--border);
+  border-radius: 10px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.upload-zone:hover,
+.upload-zone--active {
+  border-color: var(--accent);
+  background: #eff6ff;
+}
+
+.upload-zone--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.upload-zone__title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.upload-zone__hint {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.app__error {
+  color: #b91c1c;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-top: 16px;
+}
+
+.app__status {
+  color: var(--muted);
+  margin-top: 16px;
+}
+
+.app__workspace {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.app__sidebar h2 {
+  font-size: 15px;
+  margin: 0 0 4px;
+}
+
+.app__count {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.label-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.label-list__item {
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 13px;
+}
+
+.label-list__item--active {
+  border-color: var(--accent);
+  background: #eff6ff;
+}
+
+.label-list__summary {
+  font-weight: 600;
+}
+
+.label-list__barcode {
+  color: var(--muted);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.app__main {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+.app__preview {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px;
+  background: var(--bg-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.label-preview svg {
+  max-width: 100%;
+  height: auto;
+  background: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.label-preview--empty {
+  color: var(--muted);
+}
+
+.app__editor {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fields-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fields-form__row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.fields-form__input {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.app__notice {
+  font-size: 13px;
+  color: var(--muted);
+  background: var(--bg-soft);
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.app__download {
+  padding: 10px 16px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.app__download:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.app__secondary {
+  padding: 10px 16px;
+  background: #fff;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}

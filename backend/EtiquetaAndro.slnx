@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="src/EtiquetaAndro.Api/EtiquetaAndro.Api.csproj" />
+  <Project Path="src/EtiquetaAndro.Core/EtiquetaAndro.Core.csproj" />
+  <Project Path="src/EtiquetaAndro.Infrastructure/EtiquetaAndro.Infrastructure.csproj" />
+  <Project Path="tests/EtiquetaAndro.Core.Tests/EtiquetaAndro.Core.Tests.csproj" />
+</Solution>
